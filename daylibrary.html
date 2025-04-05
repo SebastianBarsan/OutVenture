@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outventure - Day Library</title>
+  <style>
+    /* Same styles as previous page */
+    input[type="file"] {
+      margin-top: 1em;
+      padding: 0.5em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      background: linear-gradient(135deg, #a8e6cf, #66bb6a);
+      color: white;
+      box-shadow: 0 4px 12px rgba(102, 187, 106, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    input[type="file"]::file-selector-button {
+      background: linear-gradient(135deg, #81c784, #388e3c);
+      border: none;
+      padding: 0.6em 1.2em;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(56, 142, 60, 0.4);
+      backdrop-filter: blur(3px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+    }
+
+    button {
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #a5d6a7, #2e7d32);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.5);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(46, 125, 50, 0.6);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaf7ec;
+      color: #2e3d2f;
+    }
+
+    nav {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header {
+      padding: 4em;
+      text-align: center;
+      background: linear-gradient(135deg, #1b5e20, #66bb6a, #43a047);
+      color: white;
+    }
+
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #2e7d32;
+      color: white;
+      margin-top: 2em;
+    }
+
+    .bird-library {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .bird-item {
+      background-color: white;
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .bird-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    .bird-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .bird-description {
+      font-size: 1em;
+      color: #333;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Outventure</div>
+    <ul>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="daylibrary.html">Day Library</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to Outventure - Day Library</h1>
+    <p>Explore birds from all over the world.</p>
+  </header>
+
+  <section id="day-library">
+    <h2>Notable Birds</h2>
+    <div class="bird-library">
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Synallaxis_azarae_76608368.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Azaras Spinetail</p>
+            <p class="bird-description">A small, elusive bird found in the grasslands of South America, recognized by its long, spinning tail feathers.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://cdn.download.ams.birds.cornell.edu/api/v1/asset/589086451/320') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Azure Tit</p>
+            <p class="bird-description">A colorful small songbird with a distinctive blue head and a black and white body.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Flickr_-_Rainbirder_-_Bearded_Bellbird_%28Procnias_averano%29_male_calling.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Bearded Bellbird</p>
+            <p class="bird-description">A tropical bird known for its distinctive bell-like call and a feathered "beard".</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://www.natureswaybirds.com/cdn/shop/articles/blue_jay_square.png?v=1713206455') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Blue Jay</p>
+            <p class="bird-description">A bold and vibrant bird with striking blue plumage, commonly found in forests and woodlands in North America.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/8/88/Molothrus_ater_2.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Brown Headed Cowbird</p>
+            <p class="bird-description">A parasitic bird that lays its eggs in other birds' nests, often found in North America.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://i.guim.co.uk/img/media/e4d347c304815ec2eb85469b62232ee938a743ff/0_316_4769_2863/master/4769.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=9f5a052618f4647110b0d084da40001c') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Buzzard</p>
+            <p class="bird-description">A type of hawk found in various parts of the world, known for its soaring flight.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Carolina_Chickadee1_by_Dan_Pancamo.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Chickadee</p>
+            <p class="bird-description">A small, friendly songbird known for its distinctive "chick-a-dee-dee-dee" call.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Andean_cock-of-the-rock_%28Rupicola_peruvianus_sanguinolentus%29_male_Antioquia.jpg/640px-Andean_cock-of-the-rock_%28Rupicola_peruvianus_sanguinolentus%29_male_Antioquia.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Cock of the Rock</p>
+            <p class="bird-description">A striking bird known for its vibrant orange plumage and unique appearance, native to South America.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/Common_firecrest_Franconville_03.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Common Firecrest</p>
+            <p class="bird-description">A small passerine bird with a striking orange and yellow crest on its head.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://www.allaboutbirds.org/guide/assets/og/619048721-1200px.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Crow</p>
+            <p class="bird-description">An intelligent and highly adaptable bird, often seen in a variety of habitats across the world.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://www.shanghaibirding.com/wp-content/uploads/2019/12/myzornis-fire-tailed006.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Fire Tailed Myzornis</p>
+            <p class="bird-description">A vibrant green bird with striking red feathers on its tail, found in the Himalayas.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjg7HOMjJ2Wn5p0nfkAn7HFPdTfS2aCG2i4meWI8t4UemjQw0UbSyJ3nDJ5J2VkitXNIRziYLrjCn7f389s2YRxqrqRMYqeYO9jhokUlOtRwBpNQsVC0u16rdzU4800UrRwmgOK6bz-fgMB/s1600/IMG_6374+Alajuela+Area%252C+Costa+Rica.JPG') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Great Potoo</p>
+            <p class="bird-description">A nocturnal bird with an eerie, ghost-like appearance, found in Central and South America.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://cdn.download.ams.birds.cornell.edu/api/v2/asset/417485711/1200') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Himalayan Bluetail</p>
+            <p class="bird-description">A strikingly beautiful bird with bright blue plumage and a long tail, found in the Himalayas.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://www.thisiscolossal.com/wp-content/uploads/2024/04/ABC_Santa-Marta-Sabrewing_wings_Carole-Turek.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Hummingbird</p>
+            <p class="bird-description">A tiny, colorful bird known for its rapid wing beats and ability to hover.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://www.torontozoo.com/img/1200/20190417030955313SacredIbis.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Ibis</p>
+            <p class="bird-description">A wader with long, curved beaks, often seen near wetlands and marshes.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://celebrateurbanbirds.org/wp-content/uploads/2016/05/northern-cardinal-1024x916.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Northern Cardinal</p>
+            <p class="bird-description">A vibrant red bird, often seen in North America, known for its striking color and melodious song.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/3/38/Eudyptula_minor_Bruny_1.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Penguin (Fairy)</p>
+            <p class="bird-description">A small, adorable penguin species known for its playful behavior and small size.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://cdn.download.ams.birds.cornell.edu/api/v2/asset/126547471/1200') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Rufous Treepie</p>
+            <p class="bird-description">A small bird native to the Amazon region, known for its rufous-colored feathers.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/2/2f/Snowy_Sheathbill.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Snowy Sheathbill</p>
+            <p class="bird-description">A hardy seabird with white plumage, often seen around the Antarctic.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://cdn.britannica.com/62/131062-050-111FFF1F/House-sparrow.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Sparrow</p>
+            <p class="bird-description">A small, versatile bird found worldwide, often seen in urban areas and gardens.</p>
+        </div>
+        <div class="bird-item">
+            <div style="background: url('https://upload.wikimedia.org/wikipedia/commons/0/0c/Whimbrel_Numenius_phaeopus.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+            <p class="bird-name">Whimbrel</p>
+            <p class="bird-description">A wader with a distinctive long, down-curved bill, often found in coastal areas.</p>
+        </div>
+    </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Outventure. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

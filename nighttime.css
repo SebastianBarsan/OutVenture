@@ -67,6 +67,8 @@ input[type="file"]::file-selector-button:hover {
       align-items: center;
       z-index: 100;
       position: relative;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     .nav .logo {
       font-size: 1.5em;
@@ -83,6 +85,24 @@ input[type="file"]::file-selector-button:hover {
       color: white;
       text-decoration: none;
       font-weight: 500;
+    }
+    .nav button {
+      transform: translate(0, -10%);
+      border-width: 3px;
+      border-radius: 12px;
+      border-color: #5a0f90;
+      border-style: solid;
+      font-weight: bold;
+      background: none;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.2s;
+      transition: all 0.3s ease;
+    }
+  
+    .nav button:hover {
+      border-color: #6e4bc6;
+      transform: scale(1.05) translate(0, -10%);
     }
     .splash {
       align-content: center;

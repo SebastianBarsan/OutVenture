@@ -32,6 +32,16 @@ input[type="file"]::file-selector-button {
 }
 
 /* Submit Image Button */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers content horizontally */
+  justify-content: center;  /* Centers content vertically */
+  text-align: center;  /* Centers the text inside the form */
+  margin: auto;
+}
+
 button {
   margin-top: 1em;
   padding: 0.8em 1.5em;
@@ -102,6 +112,9 @@ button:hover {
     }
     .upload-preview {
       margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     img.preview {
       max-width: 100%;
@@ -127,6 +140,7 @@ button:hover {
   padding: 2em;
   text-align: center;
   margin-top: 2em;
+  border-radius: 25px;
 }
 
 #reviews h2 {

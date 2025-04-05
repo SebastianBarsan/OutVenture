@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outventure</title>
   <style>
+
+input[type="file"] {
+  margin-top: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(135deg, #a8e6cf, #66bb6a);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 187, 106, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+input[type="file"]::file-selector-button {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+  border: none;
+  padding: 0.6em 1.2em;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+/* Submit Image Button */
+button {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a5d6a7, #2e7d32);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.5);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(46, 125, 50, 0.6);
+}
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,11 +82,12 @@
       font-weight: 500;
     }
     header {
-      padding: 4em;
-      text-align: center;
-      background: #66bb6a;
-      color: white;
+    padding: 4em;
+    text-align: center;
+    background: linear-gradient(135deg, #1b5e20, #66bb6a, #43a047);
+    color: white;
     }
+
     section {
       padding: 2em;
       max-width: 800px;
@@ -52,25 +99,6 @@
       background-color: #2e7d32;
       color: white;
       margin-top: 2em;
-    }
-    input[type="file"] {
-      margin-top: 1em;
-      padding: 0.5em;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    input[type="file"]::file-selector-button {
-      background: #388e3c;
-      border: none;
-      padding: 0.5em 1em;
-      color: white;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
     }
     .upload-preview {
       margin-top: 1em;
@@ -88,7 +116,66 @@
       border-radius: 8px;
       text-align: center;
       display: none; /* Hide by default */
+
+      * {
+  transition: all 0.3s ease-in-out;
+}
     }
+
+    #reviews {
+  background-color: #f5f5f5;
+  padding: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#reviews h2 {
+  font-size: 2em;
+  color: #2e7d32;
+  margin-bottom: 1em;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.review {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+}
+
+.review-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.review-text {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.review-location {
+  font-size: 0.9em;
+  color: #888;
+}
+
   </style>
 </head>
 <body>
@@ -202,5 +289,30 @@
       }
     }
   </script>
+  <section id="reviews">
+    <h2>What Our Users Are Saying</h2>
+    <div class="reviews-container">
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1" class="review-img" />
+        <p class="review-text">"Outventure helped me discover so many new birds! It's an awesome app for everyone."</p>
+        <p class="review-name">Charles Mackenzie</p>
+        <p class="review-location">California, USA</p>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User 2" class="review-img" />
+        <p class="review-text">"I love how easy it is to use. Uploading my constellation photos is so much fun!"</p>
+        <p class="review-name">Kanoko Miyazaki </p>
+        <p class="review-location">Ontario, Canada</p>
+      </div>
+      <div class="review">
+        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User 3" class="review-img" />
+        <p class="review-text">"Great way to explore the outdoors. The identification feature is spot on!"</p>
+        <p class="review-name">Samuel Green</p>
+        <p class="review-location">London, UK</p>
+      </div>
+    </div>
+  </section>
+  
+
 </body>
 </html>

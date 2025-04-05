@@ -46,7 +46,7 @@ async function submitImage() {
 
     try {
       // 1. Send the image to Nyckel API
-      const response = await fetch('https://www.nyckel.com/v1/functions/bird-identifier/invoke', {
+      const response = await fetch('https://www.nyckel.com/v1/functions/constellations/invoke', {
           method: 'POST',
           headers: {
               'Authorization': 'Bearer ' + token.access_token,

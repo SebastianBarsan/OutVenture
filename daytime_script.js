@@ -71,7 +71,7 @@ async function submitImage() {
       
       const points = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
 
-      document.getElementById('prediction').textContent = `Predicted: ${data.labelName}`;
+      document.getElementById('prediction').textContent = `${data.labelName}`;
       document.getElementById('confidence').textContent = `Confidence: ${Math.round(data.confidence * 100)}%`;
       document.getElementById('points').textContent = `You earned ${points} points! 🎉`;
       document.getElementById('result').style.display = 'block';

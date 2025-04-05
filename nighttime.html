@@ -21,15 +21,15 @@
   </div>
   <div class="splash">
     <div class="splash-left">
-      <div class="submit-title">Upload a Bird or Constellation Photo</div>
-      <div class="submit-subtitle">Choose a bird image to identify it and earn points:</div>
+      <div class="submit-title">Upload a Constellation Photo</div>
+      <div class="submit-subtitle">Choose a constellation image to identify it and earn points:</div>
       <form id="uploadForm">
         <input type="file" accept="image/*" id="fileInput" onchange="previewImage(event)" />
         <button type="button" class="buttons" onclick="submitImage()">Submit Image</button>
         
         <!-- Result section will be displayed here -->
         <div id="result" class="result">
-          <h3>Your bird species is a...</h3>
+          <h3>Your constellation is...</h3>
           <p id="prediction">Loading...</p>
           <p id="confidence">Confidence: 0%</p>
         </div>

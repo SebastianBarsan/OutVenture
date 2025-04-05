@@ -8,7 +8,7 @@ input[type="file"] {
 }
 
 input[type="file"]::file-selector-button {
-  background: linear-gradient(135deg, #81c784, #388e3c);
+  background: linear-gradient(135deg, #a8bde6, #616aa4);
   padding: 0.6em 1.2em;
   cursor: pointer;
   margin-right: 50px;
@@ -28,7 +28,7 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button {
   border-width: 3px;
   border-radius: 12px;
-  border-color: #17860d;
+  border-color: #5f066b;
   border-style: solid;
   font-weight: bold;
   background: none;
@@ -36,7 +36,7 @@ input[type="file"]::file-selector-button {
   backdrop-filter: blur(4px);
   transition: transform 0.2s;
   transition: all 0.3s ease;
-  color: #ace6af;
+  color: #dbace6;
   height: 3em;
 }
 
@@ -49,17 +49,17 @@ button {
 
 button:hover, 
 input[type="file"]::file-selector-button:hover {
-  border-color: #0f9034;
-  background-color: rgba(147, 226, 188, 0.145);
+  border-color: #6e4bc6;
+  background-color: rgba(147, 178, 226, 0.145);
 }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #eaf7ec;
-      color: #2e3d2f;
+      background-color: #dbace6;
+      color: #2e2f3d;
     }
     .nav {
-      background: linear-gradient(135deg, #116d09, #1caf45);
+      background: linear-gradient(135deg, #6a85bb, #6d3d8d);
       color: white;
       padding: 1em;
       display: flex;
@@ -99,11 +99,11 @@ input[type="file"]::file-selector-button:hover {
 
       display: flex;
 
-      background: url("https://images.unsplash.com/photo-1556648011-e01aca870a81?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-color: rgba(14, 83, 43, 0.4);
+      background: url("https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=1750&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-color: rgba(34, 14, 83, 0.4);
       background-position: center;
       background-blend-mode: multiply;
-      color: #ace6af;
+      color: #edcef4;
     }
 
     .splash .splash-left,
@@ -159,7 +159,7 @@ input[type="file"]::file-selector-button:hover {
       background: none;
       backdrop-filter: blur(4px);
       padding: 1em;
-      border-color: #0f9034;
+      border-color: #5a0f90;
       border-width: 3px;
       border-radius: 8px;
       text-align: center;
@@ -217,7 +217,7 @@ input[type="file"]::file-selector-button:hover {
 
 .review-name {
   font-weight: bold;
-  color: #2e7d32;
+  color: #3f2e7d;
 }
 
 .review-location {

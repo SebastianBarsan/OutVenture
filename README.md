@@ -1,12 +1,8 @@
-# OutVenture
-EurekaHacks 2025 project
-
----
-
 # 🌿 Outventure
 
 **Reconnect with nature. One photo at a time.**
 
+EurekaHacks 2025 project
 Outventure is an app built to help you rediscover the outdoors. Whether you're birdwatching under the sun or stargazing beneath the night sky, Outventure brings nature and technology together to encourage more time spent outside.
 
 ---

@@ -1,174 +1,226 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eaf7ec;
-    color: #2e3d2f;
-  }
-  
-  nav {
-    background-color: #2e7d32;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  header {
-    padding: 4em;
-    text-align: center;
-    background: linear-gradient(135deg, #1b5e20, #66bb6a, #43a047);
-    color: white;
-  }
-  
-  section {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2em;
-    background-color: #2e7d32;
-    color: white;
-    margin-top: 2em;
-  }
-  
-  input[type="file"] {
-    margin-top: 1em;
-    padding: 0.5em;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-    background: linear-gradient(135deg, #a8e6cf, #66bb6a);
-    color: white;
-    box-shadow: 0 4px 12px rgba(102, 187, 106, 0.4);
-    backdrop-filter: blur(4px);
-  }
-  
-  input[type="file"]::file-selector-button {
-    background: linear-gradient(135deg, #81c784, #388e3c);
-    border: none;
-    padding: 0.6em 1.2em;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(56, 142, 60, 0.4);
-    backdrop-filter: blur(3px);
-  }
-  
-  button {
-    margin-top: 1em;
-    padding: 0.8em 1.5em;
-    font-size: 1em;
-    border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #a5d6a7, #2e7d32);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.5);
-    backdrop-filter: blur(4px);
-    transition: transform 0.2s, box-shadow 0.3s;
-  }
-  
-  button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.6);
-  }
-  
-  .upload-preview {
-    margin-top: 1em;
-  }
-  
-  img.preview {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .result {
-    margin-top: 2em;
-    background: #f0f0f0;
-    padding: 1em;
-    border-radius: 8px;
-    text-align: center;
-    display: none;
-  }
-  
-  #reviews {
-    background-color: #f5f5f5;
-    padding: 2em;
-    text-align: center;
-    margin-top: 2em;
-  }
-  
-  #reviews h2 {
-    font-size: 2em;
-    color: #2e7d32;
-    margin-bottom: 1em;
-  }
-  
-  .reviews-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  
-  .review {
-    background-color: #ffffff;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
-  }
-  
-  .review-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1em;
-  }
-  
-  .review-text {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 1em;
-    font-style: italic;
-  }
-  
-  .review-name {
-    font-weight: bold;
-    color: #2e7d32;
-  }
-  
-  .review-location {
-    font-size: 0.9em;
-    color: #888;
-  }
+
+input[type="file"] {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  cursor: pointer;  
+  background: none;
+}
+
+input[type="file"]::file-selector-button {
+  background: linear-gradient(135deg, #81c784, #388e3c);
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  margin-right: 50px;
+}
+
+.submit-title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.submit-subtitle {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.buttons,
+input[type="file"]::file-selector-button {
+  border-width: 3px;
+  border-radius: 12px;
+  border-color: #17860d;
+  border-style: solid;
+  font-weight: bold;
+  background: none;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s;
+  transition: all 0.3s ease;
+  color: #ace6af;
+  height: 3em;
+}
+
+/* Submit Image Button */
+button {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+}
+
+button:hover, 
+input[type="file"]::file-selector-button:hover {
+  border-color: #0f9034;
+  background-color: rgba(147, 226, 188, 0.145);
+}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaf7ec;
+      color: #2e3d2f;
+    }
+    .nav {
+      background: linear-gradient(135deg, #116d09, #1caf45);
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      position: relative;
+    }
+    .nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      margin: 0;
+      padding: 0;
+    }
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .splash {
+      align-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      z-index: 0;
+      padding: 13em;
+      column-gap: 50px;
+
+      display: flex;
+
+      background: url("https://images.unsplash.com/photo-1556648011-e01aca870a81?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-color: rgba(14, 83, 43, 0.4);
+      background-position: center;
+      background-blend-mode: multiply;
+      color: #ace6af;
+    }
+
+    .splash .splash-left,
+    .splash .splash-right {
+      display: inline-block;
+      flex: 50%;
+    }
+
+    .splash form {
+      margin: auto;
+    }
+
+    .splash .upload-preview {
+      max-width: 500px;
+      max-height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .splash .upload-template {
+      width: 500px;
+      height: 500px;
+      border-style: dotted;
+      border-radius: 20px;
+      border-width: 5px;
+      background-position: center;
+    }
+
+/* 
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #2e7d32;
+      color: white;
+      margin-top: 2em;
+    } */
+    .upload-preview {
+      margin-top: 1em;
+    }
+    img.preview {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .result {
+      margin-top: 2em;
+      background: none;
+      backdrop-filter: blur(4px);
+      padding: 1em;
+      border-color: #0f9034;
+      border-width: 3px;
+      border-radius: 8px;
+      text-align: center;
+      border-style: solid;
+      display: none; /* Hide by default */
+
+      * {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    #reviews {
+  background-color: #f5f5f5;
+  padding: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+/* 
+#reviews h2 {
+  font-size: 2em;
+  color: #2e7d32;
+  margin-bottom: 1em;
+} */
+
+.reviews-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.review {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  width: 280px;
+  text-align: center;
+}
+
+.review-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+
+.review-text {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.review-name {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.review-location {
+  font-size: 0.9em;
+  color: #888;
+}

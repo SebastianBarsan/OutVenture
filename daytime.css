@@ -258,12 +258,20 @@ button {
    }
    
    .result {
-     margin-top: 2em;
-     background: #f0f0f0;
-     padding: 1em;
-     border-radius: 8px;
-     text-align: center;
-     display: none;
+    margin-top: 2em;
+    background: none;
+    backdrop-filter: blur(4px);
+    padding: 1em;
+    border-color: #0f9034;
+    border-width: 3px;
+    border-radius: 8px;
+    text-align: center;
+    border-style: solid;
+    display: none; /* Hide by default */
+
+    * {
+      transition: all 0.3s ease-in-out;
+    }
    }
    
    #reviews {

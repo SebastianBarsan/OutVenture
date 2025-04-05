@@ -69,9 +69,12 @@ async function submitImage() {
       // 2. Show prediction result
       // if (data.result) {
       
-      document.getElementById('prediction').textContent = `${data.labelName}`;
+      const points = Math.floor(Math.random() * (30 - 10 + 1)) + 10;
+
+      document.getElementById('prediction').textContent = `Predicted: ${data.labelName}`;
       document.getElementById('confidence').textContent = `Confidence: ${Math.round(data.confidence * 100)}%`;
-      document.getElementById('result').style.display = 'block'; // Show result
+      document.getElementById('points').textContent = `You earned ${points} points! 🎉`;
+      document.getElementById('result').style.display = 'block';
       // } else {
       //   document.getElementById('prediction').textContent = 'Unable to make a prediction.';
       //   document.getElementById('result').style.display = 'block'; // Show result even if prediction fails

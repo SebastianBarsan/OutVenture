@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outventure - Day Library</title>
+  <style>
+    /* Same styles as previous page */
+    input[type="file"] {
+      margin-top: 1em;
+      padding: 0.5em;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      background: linear-gradient(135deg, #a8e6cf, #66bb6a);
+      color: white;
+      box-shadow: 0 4px 12px rgba(102, 187, 106, 0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    input[type="file"]::file-selector-button {
+      background: linear-gradient(135deg, #81c784, #388e3c);
+      border: none;
+      padding: 0.6em 1.2em;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(56, 142, 60, 0.4);
+      backdrop-filter: blur(3px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+    }
+
+    button {
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #a5d6a7, #2e7d32);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.5);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(46, 125, 50, 0.6);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaf7ec;
+      color: #2e3d2f;
+    }
+
+    nav {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header {
+      padding: 4em;
+      text-align: center;
+      background: linear-gradient(135deg, #1b5e20, #66bb6a, #43a047);
+      color: white;
+    }
+
+    section {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #2e7d32;
+      color: white;
+      margin-top: 2em;
+    }
+
+    .constellation-library {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .constellation-item {
+      background-color: white;
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .constellation-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    .constellation-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .constellation-description {
+      font-size: 1em;
+      color: #333;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Outventure</div>
+    <ul>
+      <li><a href="#upload">Upload</a></li>
+      <li><a href="daytime_leaderboard.html">Leaderboard</a></li>
+      <li><a href="daytime.html">About</a></li>
+      <li><a href="daylibrary.html">Day Library</a></li>
+      <li><a href="nightlibrary.html">Night Library</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to Outventure - Night Library</h1>
+    <p>Explore constellations from all over the world.</p>
+  </header>
+
+  <section id="nighttime-library">
+    <h2>Notable Constellations</h2>
+    <div class="constellation-library">
+    <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Orion.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Orion</p>
+        <p class="constellation-description">One of the most recognizable constellations, Orion is known for its three-star "belt" and represents a hunter in Greek mythology.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Aquila.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Aquila</p>
+        <p class="constellation-description">Aquila represents the eagle and contains the bright star Altair. In Greek mythology, it is associated with Zeus's eagle.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Aries.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Aries</p>
+        <p class="constellation-description">Aries is a zodiac constellation representing a ram, symbolizing new beginnings.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starwalk.space/gallery/images/canis-major/1920x1080.jpg') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Canis Major</p>
+        <p class="constellation-description">Known as the "Greater Dog," Canis Major is home to the brightest star in the sky, Sirius.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Bootes.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Bootes</p>
+        <p class="constellation-description">Bootes is represented by a herdsman holding a spear and contains the bright star Arcturus.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Cassiopeia.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Cassiopeia</p>
+        <p class="constellation-description">Cassiopeia is a prominent W-shaped constellation, representing a queen from Greek mythology.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Canis_minor.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Canis Minor</p>
+        <p class="constellation-description">Known as the "Lesser Dog," Canis Minor contains the bright star Procyon.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Capricornus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Capricornus</p>
+        <p class="constellation-description">Capricornus represents the Goat, and in astrology, it is considered the tenth zodiac sign.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Corona_australis.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Corona Borealis</p>
+        <p class="constellation-description">Corona Borealis, the "Northern Crown," is a small but distinct constellation representing a crown.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Andromeda.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Andromeda</p>
+        <p class="constellation-description">Andromeda is a large constellation representing the princess from Greek mythology, and it contains the Andromeda Galaxy.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Cetus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Cetus</p>
+        <p class="constellation-description">Cetus represents the sea monster from Greek mythology and is one of the largest constellations in the sky.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Cancer.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Cancer</p>
+        <p class="constellation-description">Cancer represents the Crab and is a zodiac constellation symbolizing the fourth sign in the astrological calendar.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Cygnus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Cygnus</p>
+        <p class="constellation-description">Cygnus represents a swan and is often referred to as the "Northern Cross" because of its shape.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Delphinus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Delphinus</p>
+        <p class="constellation-description">Delphinus represents a dolphin and is a small constellation in the northern sky.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Gemini.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Gemini</p>
+        <p class="constellation-description">Gemini represents the twins Castor and Pollux, and it is known for its two bright stars.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Corvus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Corvus</p>
+        <p class="constellation-description">Corvus represents a crow and is a small constellation in the southern sky.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Grus.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Grus</p>
+        <p class="constellation-description">Grus represents a crane and is a small constellation located near the south celestial pole.</p>
+      </div>
+      <div class="constellation-item">
+        <div style="background: url('https://starregistration.net/media/wysiwyg/Constellations/Leo.png') no-repeat center center; background-size: cover; height: 200px; border-radius: 8px;"></div>
+        <p class="constellation-name">Leo</p>
+        <p class="constellation-description">Leo represents a lion and is one of the most prominent constellations of the zodiac.</  
+      </div>
+  </div>
+</section>
+    <footer>
+    <p>&copy; 2025 Outventure. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

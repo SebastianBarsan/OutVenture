@@ -1,8 +1,6 @@
 # 🌿 Outventure
 EurekaHacks 2025 project
 
-<<<<<<< HEAD
-
 =======
 **Reconnect with nature. One photo at a time.**
 

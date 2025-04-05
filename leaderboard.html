@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard - Outventure</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaf7ec;
+      color: #2e3d2f;
+    }
+    nav {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    header {
+      padding: 2em;
+      text-align: center;
+      background: #66bb6a;
+      color: white;
+    }
+    .leaderboard {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 2em;
+      max-width: 600px;
+      margin: 2em auto;
+    }
+    .leaderboard h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    .leaderboard-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border-bottom: 1px solid #ddd;
+    }
+    .leaderboard-item img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 1em;
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #2e7d32;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Outventure</div>
+    <ul>
+      <li><a href="index.html#upload">Upload</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Leaderboard</h1>
+    <p>See how you rank among fellow adventurers!</p>
+  </header>
+
+  <div class="leaderboard">
+    <h2>Top Explorers</h2>
+    <div class="leaderboard-item"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex" /> Alex - 320 pts</div>
+    <div class="leaderboard-item"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jordan" /> Jordan - 295 pts</div>
+    <div class="leaderboard-item"><img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Casey" /> Casey - 270 pts</div>
+    <div class="leaderboard-item"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Taylor" /> Taylor - 260 pts</div>
+    <div class="leaderboard-item"><img src="https://randomuser.me/api/portraits/men/53.jpg" alt="Sam" /> Sam - 250 pts</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Outventure. All rights reserved.</p>
+  </footer>
+</body>
+</html>

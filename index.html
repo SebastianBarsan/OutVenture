@@ -163,6 +163,16 @@
 
       const form = new FormData();
       form.append('data', file);
+      
+      fetch('https://www.nyckel.com/connect/token', {
+        method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'grant_type=client_credentials&client_id=lm9r14a46ffzl5tdkkba8x6d1ktzn1u6&client_secret=2m50ba9hfknzxsz88goswsenfvqhbag5k9xyzt19auvo97f8kkr6c19a8ilfjs64'
+      })
+      .then(response => response.json())
+      .then(data => console.log(data));
 
       try {
         // 1. Send the image to Nyckel API

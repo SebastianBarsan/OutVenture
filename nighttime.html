@@ -8,7 +8,7 @@
   <title>Outventure</title>
 </head>
 <body>
-  <nav>
+  <div class="nav">
     <div class="logo">Outventure</div>
     <ul style="display: flex; justify-content: space-between; align-items: center;">
       <li><a href="#upload">Upload</a></li>
@@ -17,63 +17,31 @@
       <li><a href="daylibrary.html">Day Library</a></li>
       <button id="toggleBtn">Go to Bird Scanner</button>
     </ul>
-  </nav>
-
-  <header>
-    <h1>Welcome to Outventure</h1>
-    <p>Scan birds and constellations. Explore nature. Compete with friends.</p>
-  </header>
-
-  <section id="upload">
-    <h2 style="color: rgba(28, 78, 171, 0.847);">Upload a Bird or Constellation Photo</h2>
-    <p style="color: rgba(28, 78, 171, 0.847);">Choose an image to identify and earn points:</p>
-    <form id="uploadForm">
-      <input type="file" accept="image/*" id="fileInput" onchange="previewImage(event)" />
+  </div>
+  <div class="splash">
+    <div class="splash-left">
+      <div class="submit-title">Upload a Bird or Constellation Photo</div>
+      <div class="submit-subtitle">Choose a bird image to identify it and earn points:</div>
+      <form id="uploadForm">
+        <input type="file" accept="image/*" id="fileInput" onchange="previewImage(event)" />
+        <button type="button" class="buttons" onclick="submitImage()">Submit Image</button>
+        
+        <!-- Result section will be displayed here -->
+        <div id="result" class="result">
+          <h3>Your bird species is a...</h3>
+          <p id="prediction">Loading...</p>
+          <p id="confidence">Confidence: 0%</p>
+        </div>
+      </form>
+    </div>
+    <div class="splash-right">
       <div class="upload-preview">
         <img id="preview" class="preview" src="#" alt="Image preview will appear here." style="display: none;" />
       </div>
-      <button type="button" onclick="submitImage()">Submit Image</button>
-      
-      <!-- Result section will be displayed here -->
-      <div id="result" class="result">
-        <h3>Prediction Result:</h3>
-        <p id="prediction">Loading...</p>
-        <p id="confidence">Confidence: 0%</p>
-      </div>
-    </form>
-  </section>
+      <div class="upload-template" id="preview-template">
 
-  <section id="about" style="color: rgba(28, 78, 171, 0.847);">
-    <h2>About Outventure</h2>
-    <p>Outventure helps you explore the outdoors by recognizing birds and constellations through image uploads. Compete with friends, gain points, and discover more about the world around you.</p>
-  </section>
-
-  <section id="reviews">
-    <h2>What Our Users Are Saying</h2>
-    <div class="reviews-container">
-      <div class="review">
-        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1" class="review-img" />
-        <p class="review-text">"Outventure helped me discover so many new birds! It's an awesome app for everyone."</p>
-        <p class="review-name">Charles Mackenzie</p>
-        <p class="review-location">California, USA</p>
-      </div>
-      <div class="review">
-        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User 2" class="review-img" />
-        <p class="review-text">"I love how easy it is to use. Uploading my constellation photos is so much fun!"</p>
-        <p class="review-name">Kanoko Miyazaki </p>
-        <p class="review-location">Ontario, Canada</p>
-      </div>
-      <div class="review">
-        <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User 3" class="review-img" />
-        <p class="review-text">"Great way to explore the outdoors. The identification feature is spot on!"</p>
-        <p class="review-name">Samuel Green</p>
-        <p class="review-location">London, UK</p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Outventure. All rights reserved.</p>
-  </footer>
+  </div>
 </body>
 </html>

@@ -313,14 +313,15 @@ button:hover {
           console.log(data);
 
           // 2. Show prediction result
-          if (data.result) {
-            document.getElementById('prediction').textContent = `Predicted: ${data.result.species}`;
-            document.getElementById('confidence').textContent = `Confidence: ${Math.round(data.result.confidence * 100)}%`;
-            document.getElementById('result').style.display = 'block'; // Show result
-          } else {
-            document.getElementById('prediction').textContent = 'Unable to make a prediction.';
-            document.getElementById('result').style.display = 'block'; // Show result even if prediction fails
-          }
+          // if (data.result) {
+          
+          document.getElementById('prediction').textContent = `Predicted: ${data.labelName}`;
+          document.getElementById('confidence').textContent = `Confidence: ${Math.round(data.confidence * 100)}%`;
+          document.getElementById('result').style.display = 'block'; // Show result
+          // } else {
+          //   document.getElementById('prediction').textContent = 'Unable to make a prediction.';
+          //   document.getElementById('result').style.display = 'block'; // Show result even if prediction fails
+          // }
         } catch (error) {
           console.error('Error uploading image:', error);
           document.getElementById('prediction').textContent = 'Error occurred while processing the image.';

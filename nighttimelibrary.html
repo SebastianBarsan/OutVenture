@@ -66,39 +66,39 @@
       background-color: #616aa4;
       color: rgba(73, 112, 184, 0.4);
     }
-
-    nav {
-      background-color: #616aa4;
-      color: white;
-      padding: 1em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .logo {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1em;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
+  .nav {
+    background: linear-gradient(135deg, #6a85bb, #6d3d8d);
+    color: white;
+    padding: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+  }
+  .nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
 
     header {
       padding: 4em;
       text-align: center;
-      background: linear-gradient(135deg, rgba(73, 112, 184, 0.4), #a8bde6, #616aa4);
+      background: url("https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
       color: white;
     }
 
@@ -153,16 +153,16 @@
   <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/scenes-and-landscapes-part-5/269/87-512.png" type="image/x-icon" />
 </head>
 <body>
-  <nav>
+  <div class="nav">
     <div class="logo">Outventure</div>
     <ul>
       <li><a href="nighttime.html#upload">Upload</a></li>
       <li><a href="nighttime_leaderboard.html">Leaderboard</a></li>
-      <li><a href="nighttime.html">About</a></li>
-      <li><a href="nighttimelibrary.html">Day Library</a></li>
+      <li><a href="nighttime.html#about">About</a></li>
+      <li><a href="daylibrary.html">Day Library</a></li>
       <li><a href="nighttimelibrary.html">Night Library</a></li>
     </ul>
-  </nav>
+  </div>
 
   <header>
     <h1>Welcome to Outventure - Night Library</h1>

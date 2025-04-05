@@ -67,30 +67,30 @@
       background-color: #eaf7ec;
       color: #2e3d2f;
     }
-
-    nav {
-      background-color: #2e7d32;
+    .nav {
+      background: linear-gradient(135deg, #116d09, #28c97b);
       color: white;
-      padding: 1em;
+      padding: 2em;
+      padding-left: 50px;
+      padding-right: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 100;
+      position: relative;
     }
-
-    nav .logo {
+    .nav .logo {
       font-size: 1.5em;
       font-weight: bold;
     }
-
-    nav ul {
+    .nav ul {
       list-style: none;
       display: flex;
       gap: 1em;
       margin: 0;
       padding: 0;
     }
-
-    nav ul li a {
+    .nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: 500;
@@ -99,7 +99,7 @@
     header {
       padding: 4em;
       text-align: center;
-      background: linear-gradient(135deg, #1b5e20, #66bb6a, #43a047);
+      background: url("https://plus.unsplash.com/premium_photo-1666666222364-7479e7347833?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
       color: white;
     }
 
@@ -153,16 +153,16 @@
   </style>
 </head>
 <body>
-  <nav>
+  <div class="nav">
     <div class="logo">Outventure</div>
     <ul>
       <li><a href="daytime.html#upload">Upload</a></li>
       <li><a href="daytime_leaderboard.html">Leaderboard</a></li>
-      <li><a href="daytime.html">About</a></li>
+      <li><a href="daytime.html#about">About</a></li>
       <li><a href="daylibrary.html">Day Library</a></li>
       <li><a href="nighttimelibrary.html">Night Library</a></li>
     </ul>
-  </nav>
+  </div>
 
   <header>
     <h1>Welcome to Outventure - Day Library</h1>

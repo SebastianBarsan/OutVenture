@@ -28,7 +28,7 @@ When the sun sets, Outventure switches to Night Mode. Capture a picture of the n
 
 ## 🛠️ Built With
 
-- JavaScrip
+- JavaScript
 - HTML
 - CSS
 - Nyckel astronomy and bird species datasets
